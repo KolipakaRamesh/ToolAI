@@ -53,9 +53,13 @@ graph TB
         API["/api/chat<br/>Endpoint"]
         ORCH[AI Orchestrator]
         
-        subgraph "Tools"
-            CALC[Calculator Tool<br/>🧮]
-            WEATHER[Weather Tool<br/>🌤️]
+        subgraph "6 Professional Tools"
+            CALC[Calculator<br/>🧮]
+            WEATHER[Weather<br/>🌤️]
+            DATA[Data Analyzer<br/>📊]
+            PASS[Password Generator<br/>🔐]
+            EMAIL[Email Validator<br/>📧]
+            CURR[Currency Converter<br/>💱]
         end
     end
     
@@ -69,8 +73,16 @@ graph TB
     GROQ -->|Tool Decision| ORCH
     ORCH -->|Execute if needed| CALC
     ORCH -->|Execute if needed| WEATHER
+    ORCH -->|Execute if needed| DATA
+    ORCH -->|Execute if needed| PASS
+    ORCH -->|Execute if needed| EMAIL
+    ORCH -->|Execute if needed| CURR
     CALC -->|Result| ORCH
     WEATHER -->|Result| ORCH
+    DATA -->|Result| ORCH
+    PASS -->|Result| ORCH
+    EMAIL -->|Result| ORCH
+    CURR -->|Result| ORCH
     ORCH -->|2. Generate Response| GROQ
     GROQ -->|Final Answer| ORCH
     ORCH -->|JSON Response| API
@@ -80,6 +92,10 @@ graph TB
     style GROQ fill:#ec4899,stroke:#db2777,color:#fff
     style CALC fill:#14b8a6,stroke:#0d9488,color:#fff
     style WEATHER fill:#14b8a6,stroke:#0d9488,color:#fff
+    style DATA fill:#14b8a6,stroke:#0d9488,color:#fff
+    style PASS fill:#14b8a6,stroke:#0d9488,color:#fff
+    style EMAIL fill:#14b8a6,stroke:#0d9488,color:#fff
+    style CURR fill:#14b8a6,stroke:#0d9488,color:#fff
     style ORCH fill:#8b5cf6,stroke:#7c3aed,color:#fff
 ```
 
