@@ -291,18 +291,129 @@ TOOLS = [
 2. **Tool Execution**: If needed, executes the appropriate tool(s)
 3. **Second AI Call**: Generates natural language response using tool results
 
-### Calculator Tool
+### 🧮 Calculator Tool
 
-- Safely evaluates mathematical expressions
-- Supports: `+`, `-`, `*`, `/`, `sqrt()`, `sin()`, `cos()`, `tan()`, `log()`, `exp()`
-- Constants: `pi`, `e`
-- Sandboxed execution (no arbitrary code)
+**Purpose**: Perform accurate mathematical calculations
 
-### Weather Tool
+**Capabilities:**
+- Basic operations: `+`, `-`, `*`, `/`
+- Advanced functions: `sqrt()`, `sin()`, `cos()`, `tan()`, `log()`, `exp()`
+- Mathematical constants: `pi`, `e`
+- Complex expressions: `sqrt(144) + sin(pi/2) * 10`
 
-- Returns temperature, condition, and humidity
-- Currently uses mock data (easily replaceable with real API)
-- Supports any city name
+**Security:**
+- Sandboxed execution with restricted namespace
+- No arbitrary code execution
+- Safe evaluation of mathematical expressions only
+
+### 🌤️ Weather Tool
+
+**Purpose**: Provide weather information for cities
+
+**Capabilities:**
+- Temperature in Celsius
+- Weather condition (Sunny, Cloudy, Rainy, etc.)
+- Humidity percentage
+- Supports major cities worldwide
+
+**Implementation:**
+- Currently uses mock data for demonstration
+- Easily replaceable with real weather API (OpenWeatherMap, WeatherAPI, etc.)
+- Returns generic data for unknown cities
+
+### 📊 Data Analyzer Tool
+
+**Purpose**: Perform statistical analysis on numerical data
+
+**Capabilities:**
+- **Descriptive Statistics:**
+  - Count, Sum, Mean (average)
+  - Median (middle value)
+  - Mode (most frequent value)
+  - Min, Max, Range
+  - Standard Deviation (data spread)
+
+**Input Format:**
+- Comma-separated numbers: `"10, 20, 30, 40, 50"`
+- Supports integers and decimals
+- Automatic whitespace trimming
+
+**Use Cases:**
+- Analyze sales data
+- Calculate test score statistics
+- Evaluate survey results
+- Financial data analysis
+
+### 🔐 Password Generator Tool
+
+**Purpose**: Generate secure, random passwords
+
+**Capabilities:**
+- Customizable length (8-64 characters)
+- Character types:
+  - Lowercase letters (a-z)
+  - Uppercase letters (A-Z)
+  - Numbers (0-9)
+  - Special symbols (!@#$%^&*...)
+- Optional symbol inclusion
+- Guaranteed character diversity (at least one of each type)
+- Random shuffling to avoid patterns
+
+**Security Features:**
+- Cryptographically random generation
+- No predictable patterns
+- Strength rating (Strong/Medium)
+
+### 📧 Email Address Validator Tool
+
+**Purpose**: Validate email address format and domain
+
+**Capabilities:**
+- **Format Validation:**
+  - Checks for @ symbol
+  - Validates username format
+  - Verifies domain structure
+  - Ensures valid TLD (top-level domain)
+
+- **Domain Analysis:**
+  - Extracts domain name
+  - Identifies common providers (Gmail, Yahoo, Outlook, etc.)
+  - Provides validation feedback
+
+**Validation Rules:**
+- Username: Letters, numbers, dots, underscores, %, +, -
+- Domain: Letters, numbers, dots, hyphens
+- TLD: At least 2 letters
+
+**Output:**
+- Validity status (true/false)
+- Domain information
+- Helpful suggestions for invalid emails
+
+### 💱 Currency Converter Tool
+
+**Purpose**: Convert amounts between different currencies
+
+**Capabilities:**
+- **Supported Currencies:**
+  - USD (US Dollar)
+  - EUR (Euro)
+  - GBP (British Pound)
+  - INR (Indian Rupee)
+  - JPY (Japanese Yen)
+  - AUD (Australian Dollar)
+  - CAD (Canadian Dollar)
+
+**Features:**
+- Real-time conversion calculations
+- Exchange rate display
+- Accurate decimal handling
+- Bidirectional conversion (any currency to any currency)
+
+**Implementation:**
+- Uses approximate exchange rates for demonstration
+- Easily replaceable with live API (ExchangeRate-API, Fixer.io, etc.)
+- Converts via USD as base currency
 
 ## 🎨 UI Features
 
