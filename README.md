@@ -14,6 +14,28 @@ A smart AI assistant powered by Groq that can intelligently decide when to use e
   - 💱 **Currency Converter** - Multi-currency conversion
 - **Modern UI**: Beautiful, responsive chat interface with light theme
 - **Fast Responses**: Powered by Groq's ultra-fast LLM API
+- **🔧 Tool Calling for Modern LLMs**: Demonstrates function calling capabilities, a cutting-edge feature in modern AI models that allows LLMs to interact with external tools and APIs
+
+## 🎯 Why Tool Calling Matters
+
+This project showcases **Tool Calling** (also known as **Function Calling**), a powerful feature available in modern LLMs like GPT-4, Claude, and Groq models. 
+
+**What is Tool Calling?**
+- Modern LLMs can intelligently decide when to use external tools vs. answering directly
+- The AI analyzes queries and automatically calls the appropriate function
+- Results are integrated back into natural language responses
+
+**Key Benefits:**
+- ✅ **Accuracy**: Use specialized tools for calculations, data analysis, etc.
+- ✅ **Extensibility**: Easily add new capabilities without retraining the model
+- ✅ **Real-world Applications**: Connect AI to databases, APIs, and external services
+- ✅ **Industry Standard**: Used in production by OpenAI, Anthropic, Google, and more
+
+**This project demonstrates:**
+- How to define tools using JSON schema
+- Intelligent routing between direct responses and tool usage
+- Handling tool results and generating natural responses
+- Best practices for tool-calling architecture
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
 ![Flask](https://img.shields.io/badge/Flask-3.0.0-green.svg)
